@@ -24,10 +24,24 @@ BST<T>::BST(const T* arr, const unsigned int& size) {
 }
 
 template <typename T>
+BST<T>::~BST(void) {
+  if(first != NULL)
+    delete first;
+}
+
+template <typename T>
 BST<T>::BST::Node::Node(const T& item) {
   left = NULL;
   right = NULL;
   this->item = item;
+}
+
+template <typename T>
+BST<T>::BST::Node::~Node(void) {
+  if(left != NULL)
+    delete left;
+  if(right != NULL)
+    delete right;
 }
 
 template <typename T>

@@ -27,11 +27,13 @@ class BST {
         Node* right;
       public:
         Node(const T& item);
+        ~Node(void);
     };
     Node* first;
     Node** search_node(const T& item);
   public:
     BST(const T* arr = NULL, const unsigned int& size = 0);
+    ~BST(void);
     T* search(const T& item);
     void insert(const T& item, Node** next = NULL);
     void del(const T& item);

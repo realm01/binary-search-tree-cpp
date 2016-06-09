@@ -31,13 +31,16 @@ int main() {
 
   BST<int>* ex = new BST<int>(arr, size);
 
-  ex->dump();
+  //ex->dump();
 
   cout << ex->search(2) << endl;
   cout << ex->search(5) << endl;
 
   ex->del(7);
-  ex->dump();
+  //ex->dump();
+
+  delete arr;
+  delete ex;
 
   return 0;
 }
